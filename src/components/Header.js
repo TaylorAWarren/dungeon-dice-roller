@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <div style={styles.header}>
         <Link to="/">Home</Link> {" "}
-        <Link to="/about">About</Link></div>
+        <Link to="/about">About</Link>
+        <Link to="/teamBuilder">Team Builder</Link>
+    </div>
   )
 }
 
