@@ -44,7 +44,6 @@ export default function TeamBuilderPage() {
         setPlayers(players.filter((player, i) => i !== id))
         setTeams()
         setCurrentTeam(0)
-        console.log(currentTeam)
     }
 
     const build_list = (inlist, people = []) => {
