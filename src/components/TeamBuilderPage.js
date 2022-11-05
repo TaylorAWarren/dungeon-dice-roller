@@ -76,10 +76,10 @@ export default function TeamBuilderPage() {
     const current_team_blob = () => {
         if(teams && teams.length){
             let prev_button = (currentTeam > 0 ? <button style={{...styles.swapTeamButton, ...styles.prevTeamButton}} onClick={(e) => handleChangeTeams((-1))}>Prev</button> : "")
-            let next_button = (currentTeam < teams.length ? <button style={{...styles.swapTeamButton, ...styles.nextTeamButton}} onClick={(e) => handleChangeTeams((1))}>Next</button> : "")
+            let next_button = (currentTeam < teams.length - 1 ? <button style={{...styles.swapTeamButton, ...styles.nextTeamButton}} onClick={(e) => handleChangeTeams((1))}>Next</button> : "")
             return(
                 <div>
-                <p> Setup {currentTeam + 1} of {teams.length + 1}</p>
+                <p> Setup {currentTeam + 1} of {teams.length}</p>
                 <div style={styles.teamsBlock}>
                 {prev_button}
                 {build_list(teams[currentTeam], players)}
@@ -170,7 +170,7 @@ const styles = {
     swapTeamButton: {
         color:"pink",
         fontSize: "18px",
-        displar: "inline",
+        display: "inline",
         height: "250px",
         width: "250px"
     },
@@ -192,10 +192,8 @@ const styles = {
     teamListElement: {
         display: "inline",
         margin: "5px",
-        backgroundColor: "#999",
-        padding: "5px"
-    },
-    teamListElement: {
+        backgroundColor: "#EEE",
+        padding: "5px",
         display: "inline",
         float: "center"
     }
