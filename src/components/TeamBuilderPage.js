@@ -43,6 +43,8 @@ export default function TeamBuilderPage() {
         e.preventDefault();
         setPlayers(players.filter((player, i) => i !== id))
         setTeams()
+        setCurrentTeam(0)
+        console.log(currentTeam)
     }
 
     const build_list = (inlist, people = []) => {
@@ -194,7 +196,6 @@ const styles = {
         margin: "5px",
         backgroundColor: "#EEE",
         padding: "5px",
-        display: "inline",
         float: "center"
     }
 }
