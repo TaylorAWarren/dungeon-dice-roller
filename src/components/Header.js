@@ -5,9 +5,10 @@ import { colors } from "../constants/colors"
 export default function Header() {
   return (
     <div style={styles.header}>
-        <Link to="/">Home</Link> {" "}
-        <Link to="/about">About</Link>
-        <Link to="/teamBuilder">Team Builder</Link>
+        <Link to="/"> Home</Link> {" "}
+        <Link to="/about"> About</Link>
+        <Link to="/teamBuilder"> Team Builder</Link>
+        <Link to="/CharacterSheet"> Character Sheet</Link>
     </div>
   )
 }
